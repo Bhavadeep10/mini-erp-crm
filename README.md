@@ -1,178 +1,88 @@
-# Mini ERP + CRM Operations Portal
+Mini ERP + CRM Operations Portal
 
-A full-stack Mini ERP + CRM Operations Portal developed as a case study project for managing customers, products, inventory, stock movements, and sales challans.
+A full stack web application for managing customers, products, inventory and sales challans.
 
-The application provides role-based access for Admin, Sales, Warehouse, and Accounts users.
+Features
 
----
+User login and authentication
+Role based access
+Customer management
+Product management
+Stock IN and OUT
+Low stock tracking
+Sales challan creation
+Draft and Confirmed challans
+Automatic stock reduction
+Search and pagination
 
-## Project Overview
+Technologies Used
 
-The Mini ERP + CRM Operations Portal helps a business manage:
+React
+JavaScript
+CSS
+Node.js
+Express.js
+TypeScript
+PostgreSQL
+Neon
+Postman
+Git and GitHub
+Render
 
-- Customer information
-- CRM follow-ups
-- Product inventory
-- Stock IN and OUT movements
-- Sales challans
-- User authentication
-- Role-based authorization
-- PostgreSQL database operations
-- REST APIs
-- Responsive web interface
+Main Modules
 
-The project is built using React for the frontend, Node.js + Express.js + TypeScript for the backend, and PostgreSQL for the database.
+Customer Management
 
----
+Add, edit, search and manage customer information and follow-ups.
 
-## Features
+Product and Inventory
 
-### Authentication
+Manage products, stock quantities, warehouse locations and stock movements.
 
-- User registration
-- User login
-- Password hashing using bcrypt
-- JWT-based authentication
-- Protected API routes
-- Role-based authorization
+Sales Challan
 
-### CRM / Customers
+Create draft challans and confirm them. Confirming a challan automatically reduces the available stock.
 
-- Add customers
-- Edit customers
-- Search customers
-- Filter customers
-- View customer details
-- Customer status:
-  - Lead
-  - Active
-  - Inactive
-- Customer type:
-  - Retail
-  - Wholesale
-  - Distributor
-- GST number
-- Business details
-- Address
-- Follow-up date
-- Follow-up notes
+Live Application
 
-### Products & Inventory
+Frontend
+https://mini-erp-crm-14qhd.onrender.com
 
-- Add products
-- Edit products
-- Search products
-- Product categories
-- SKU management
-- Unit price
-- Current stock
-- Minimum stock level
-- Warehouse location
-- Low-stock identification
-- Stock IN
-- Stock OUT
-- Stock movement history
+Backend
+https://mini-erp-crm-uuh8.onrender.com
 
-### Sales Challans
+GitHub
+https://github.com/Bhavadeep10/mini-erp-crm
 
-- Create sales challan
-- Automatically generate challan number
-- Add multiple products
-- Add product quantities
-- Create Draft challan
-- Confirm challan
-- Cancelled status support
-- Stock is reduced when a challan is confirmed
-- Prevents negative stock
-- Shows insufficient stock error
-- Stores product snapshot information in challan items
+Database
 
----
+PostgreSQL is used for storing application data.
 
-## User Roles
+Main tables
 
-| Role | Main Access |
-|------|-------------|
-| ADMIN | Full system access |
-| SALES | Customers and Sales Challans |
-| WAREHOUSE | Products and Stock |
-| ACCOUNTS | Accounts-related operations |
+users
+customers
+customer_followups
+products
+stock_movements
+sales_challans
+sales_challan_items
 
-Backend role-based middleware is used to restrict protected operations.
+API Testing
 
----
+Postman collection is available in the postman folder.
 
-## Technology Stack
+Testing Done
 
-### Frontend
+Admin login
+Customer creation
+Product creation
+Stock IN and OUT
+Sales challan creation
+Challan confirmation
+Automatic stock reduction
+Insufficient stock validation
 
-- React
-- JavaScript
-- CSS
-- Vite
-- Fetch API
+Developer
 
-### Backend
-
-- Node.js
-- Express.js
-- TypeScript
-- JWT
-- bcryptjs
-
-### Database
-
-- PostgreSQL
-
-### Development Tools
-
-- Visual Studio Code
-- Git
-- GitHub
-- Postman
-- pgAdmin
-
----
-
-## Project Structure
-
-```text
-mini-erp-crm/
-│
-├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   │   └── database.ts
-│   │   │
-│   │   ├── controllers/
-│   │   │   ├── authController.ts
-│   │   │   ├── customerController.ts
-│   │   │   ├── productController.ts
-│   │   │   └── challanController.ts
-│   │   │
-│   │   ├── middleware/
-│   │   │   ├── authMiddleware.ts
-│   │   │   └── roleMiddleware.ts
-│   │   │
-│   │   ├── routes/
-│   │   │   ├── authRoutes.ts
-│   │   │   ├── customerRoutes.ts
-│   │   │   ├── productRoutes.ts
-│   │   │   └── challanRoutes.ts
-│   │   │
-│   │   └── server.ts
-│   │
-│   ├── .env
-│   ├── package.json
-│   ├── package-lock.json
-│   └── tsconfig.json
-│
-├── frontend/
-│
-├── database/
-│   └── schema.sql
-│
-├── postman/
-│
-├── .gitignore
-└── README.md
+Bhavadeep
