@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:5000";
+const API = "https://mini-erp-crm-uuh8.onrender.com";
 
 function App() {
   const savedUser = JSON.parse(localStorage.getItem("user") || "null");
